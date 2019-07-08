@@ -1,7 +1,7 @@
 {
   "check_interval_sec": 300,
   "splunk_url":"https://splunk:8088/services/collector",
-  "splunk_token": "5da82692-4af1-43ad-9660-e204976fea11",
+  "splunk_token": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
   "address": "https://{}.diagnosticrobotics.com",
   "subdomains": [
     "test",
