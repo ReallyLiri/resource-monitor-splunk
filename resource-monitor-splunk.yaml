@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resource-monitor-splunk
+  labels: # get deployment by label
+    app: resource-monitor-splunk
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  selector: # selector from service
+    matchLabels:
+      app: resource-monitor-splunk
+  template:
+    metadata:
+      labels: # get pod by label
+        app: resource-monitor-splunk
+    spec:
+      restartPolicy: Always
+      hostname: monitoring-service
+      containers:
+
+      - name: resource-monitor-splunk
+        image: reallyliri/resource-monitor-splunk:1.0 # change me !
+        imagePullPolicy: Always
